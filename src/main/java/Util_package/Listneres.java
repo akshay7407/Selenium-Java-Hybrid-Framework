@@ -19,21 +19,23 @@ import extentReportPackage.ExtentReporterNg;
 public class Listneres extends utilClass implements ITestListener{
      ExtentTest test ;
 	ExtentReports extent = ExtentReporterNg.getReporterObject();
+	ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest>() ; //Thread safe
 	
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
+	    extentTest.set(test); // unique thread ID
 		
 	}
 
 	
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, "test case is passed ");
+		extentTest.get().log(Status.PASS, "test case is passed ");
 		
 	}
 
 
 	public void onTestFailure(ITestResult result) {
-		test.fail(result.getThrowable());
+		extentTest.get().fail(result.getThrowable());
         String filepath = null ;
 		try {
 		 filepath =TakeScreenShot(result.getMethod().getMethodName());
