@@ -1,6 +1,7 @@
 <suite name="Suite">
 	<listeners>
-		<listener class-name="Util_package.Listneres" />
+		<listener class-name="listenerPackage.Listneres" />
+		<listener class-name="listenerPackage.IReport" />
 	</listeners>
 	<test name="Test">
 		<classes>

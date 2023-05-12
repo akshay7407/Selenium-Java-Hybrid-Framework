@@ -42,7 +42,7 @@ public class homepagetest extends baseClass{
 	}
        	@Test
        	
-       	public void URl () {
+       	public void VerifyUrl () {
        		
        	SoftAssert soft=new SoftAssert();
        	soft.assertAll();

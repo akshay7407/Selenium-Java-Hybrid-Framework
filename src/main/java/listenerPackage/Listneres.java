@@ -1,4 +1,4 @@
-package Util_package;
+package listenerPackage;
 
 import java.io.IOException;
 
@@ -12,6 +12,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import Util_package.utilClass;
 import extentReportPackage.ExtentReporterNg;
 
 @Listeners
