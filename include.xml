@@ -1,0 +1,14 @@
+
+<suite name="Suite">
+<listeners>
+		<listener class-name="Util_package.Listneres" />
+	</listeners>
+  <test  name="Test">
+    <classes>
+      <class name="Test_Layer.homepagetest"/>
+     <methods>
+<include name= "verifytitle">/</include>
+    </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
