@@ -13,7 +13,8 @@ import Util_package.utilClass;
 public class AdminPage extends baseClass {
 	
 	public Actions act ;
-	
+	 
+	String links = "//ul[@class=\"oxd-main-menu\"]";
 	
 
 	@FindBy(xpath="//span[text()='Admin']")
@@ -56,8 +57,8 @@ public class AdminPage extends baseClass {
 	 public void adminclick() {
 		 
 		  act=new Actions(driver);
-		 
-		 act.click(admin).build().perform();
+		 utilClass.ClickLinkInUl(driver, "Admin", links);
+//		 act.click(admin).build().perform();
 		 act.click(usermanagement).build().perform();;
 		 act.moveToElement(users).click().build().perform();
 	 
