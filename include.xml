@@ -10,6 +10,10 @@
 			<methods>
 				<include name="verifytitle">/</include>
 			</methods>
+			<class name="Test_Layer.logintest" />
+			<methods>
+			<include name = "loginFunctionality">/</include>
+			</methods>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

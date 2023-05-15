@@ -20,7 +20,7 @@ import extentReportPackage.ExtentReporterNg;
 @Listeners
 
 public class Listneres extends utilClass implements ITestListener{
-     ExtentTest test ;
+     public static ExtentTest test ;
 	ExtentReports extent = ExtentReporterNg.getReporterObject();
 	ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest>() ; //Thread safe
 	
@@ -32,7 +32,7 @@ public class Listneres extends utilClass implements ITestListener{
 
 	
 	public void onTestSuccess(ITestResult result) {
-//		extentTest.get().log(Status.PASS, "test case is passed ");
+//		extentTest.get().log(Status.PASS, result.getMethod().getDescription());
 		extentTest.get().log(Status.PASS, result.getMethod().getMethodName());
 		System.out.println(result.getMethod().getMethodName()+ ":  Passed");
 		

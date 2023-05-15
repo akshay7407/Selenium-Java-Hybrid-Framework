@@ -8,10 +8,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.Status;
+
 import Base_Layer.baseClass;
 import Page_Layer.AdminPage;
 import Page_Layer.HomePage;
 import Page_Layer.LoginPage;
+import listenerPackage.Listneres;
 
 public class homepagetest extends baseClass {
 	public static LoginPage loginpage;
@@ -33,11 +36,13 @@ public class homepagetest extends baseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2 ,description = "Verify the orangeHrm title after login")
 	public void verifytitle() {
-
+		Listneres.test.log(Status.INFO, "Get the String of title");
 		String actualTile = homepage.verifyTitle();
+		Listneres.test.log(Status.INFO, "Addthe expected title");
 		String expectedTitle = "OrangeHRM";
+		Listneres.test.log(Status.INFO, "Verify that title is equal to expected title");
 		Assert.assertEquals(actualTile, expectedTitle);
 	}
 
