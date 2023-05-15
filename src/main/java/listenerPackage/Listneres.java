@@ -1,5 +1,7 @@
 package listenerPackage;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
 
 
@@ -23,14 +25,16 @@ public class Listneres extends utilClass implements ITestListener{
 	ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest>() ; //Thread safe
 	
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getMethod().getMethodName());
+		test = extent.createTest(result.getMethod().getMethodName()).assignAuthor("Akshay Gaikwad").assignCategory("Testing").assignDevice("windows");
 	    extentTest.set(test); // unique thread ID
 		
 	}
 
 	
 	public void onTestSuccess(ITestResult result) {
-		extentTest.get().log(Status.PASS, "test case is passed ");
+//		extentTest.get().log(Status.PASS, "test case is passed ");
+		extentTest.get().log(Status.PASS, result.getMethod().getMethodName());
+		System.out.println(result.getMethod().getMethodName()+ ":  Passed");
 		
 	}
 
@@ -68,6 +72,12 @@ public class Listneres extends utilClass implements ITestListener{
 	
 	public void onFinish(ITestContext context) {
 		extent.flush();
+		try {
+			Desktop.getDesktop().browse(new File(System.getProperty("user.dir")+"//report//extentReport.html").toURI());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
