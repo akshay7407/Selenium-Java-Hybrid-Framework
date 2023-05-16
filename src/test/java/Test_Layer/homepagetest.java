@@ -43,7 +43,7 @@ public class homepagetest extends baseClass {
 	public void verifytitle() {
 		Listneres.test.log(Status.INFO, "Get the String of title");
 		String actualTile = homepage.verifyTitle();
-		Listneres.test.log(Status.INFO, "Addthe expected title");
+		Listneres.test.log(Status.INFO, "Add the expected title");
 		String expectedTitle = "OrangeHRM";
 		Listneres.test.log(Status.INFO, "Verify that title is equal to expected title");
 		Assert.assertEquals(actualTile, expectedTitle);

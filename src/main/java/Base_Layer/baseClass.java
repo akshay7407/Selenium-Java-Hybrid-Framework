@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 
 import Util_package.WebEventListener;
@@ -83,7 +84,7 @@ public class baseClass   {
 
 	}
 	
-	@AfterTest
+	@AfterSuite
 	public void tearDown() {
 		driver.quit();
 	}
