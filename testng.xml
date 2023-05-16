@@ -3,6 +3,7 @@
 		<listener class-name="listenerPackage.Listneres" />
 		<listener class-name="listenerPackage.AnnotationTransformer" />
 		<listener class-name="listenerPackage.IReport" />
+		<listener class-name="io.qameta.allure.testng.AllureTestNg" />
 	</listeners>
 	<test name="Test">
 		<classes>

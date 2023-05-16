@@ -8,17 +8,19 @@ import org.testng.annotations.Test;
 import Base_Layer.baseClass;
 import Page_Layer.LoginPage;
 import Page_Layer.Ohm_directory;
+import io.qameta.allure.Step;
 
 public class Ohm_directoryTest extends baseClass {
 	Ohm_directory obj ;
-	@BeforeMethod
 	
-	public void basic() {
+	@BeforeMethod
+	@Step("Basic Initalization of browser and login process")
+	public void basicIntialization() {
 		baseClass.initalization();
 		LoginPage obj1 = new LoginPage();
 		obj1.loginFunctionality("Admin", "admin123");
 	}
-	@Test
+	@Test (description = "Enter directory tab and search the user")
 	
 	public void directory() {
 	  obj=new Ohm_directory();
@@ -28,6 +30,7 @@ public class Ohm_directoryTest extends baseClass {
 	
 	
 	@AfterClass
+	@Step("Close the browser")
 	
 	public void teardown() {
 		driver.quit();

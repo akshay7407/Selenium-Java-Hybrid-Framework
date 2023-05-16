@@ -1,10 +1,13 @@
 package listenerPackage;
 
 import java.awt.Desktop;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -16,6 +19,8 @@ import com.aventstack.extentreports.Status;
 
 import Util_package.utilClass;
 import extentReportPackage.ExtentReporterNg;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 
 @Listeners
 
@@ -37,7 +42,10 @@ public class Listneres extends utilClass implements ITestListener{
 		System.out.println(result.getMethod().getMethodName()+ ":  Passed");
 		
 	}
-
+	 @Attachment(value = "Screenshot of {0}", type = "image/png")
+	    public byte[] saveScreenshot(String name, WebDriver driver) {
+	        return (byte[]) ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	    }
 
 	public void onTestFailure(ITestResult result) {
 		extentTest.get().fail(result.getThrowable());
@@ -49,6 +57,7 @@ public class Listneres extends utilClass implements ITestListener{
 			e.printStackTrace();
 		}
 		test.addScreenCaptureFromPath(filepath ,result.getMethod().getMethodName());
+		   saveScreenshot(result.getName(), driver);
 	}
 
 	

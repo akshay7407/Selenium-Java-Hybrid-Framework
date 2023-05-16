@@ -11,6 +11,7 @@ import Base_Layer.baseClass;
 import Util_package.Action;
 import Util_package.Javascriptexe;
 import Util_package.utilClass;
+import io.qameta.allure.Step;
 
 public class Ohm_directory extends baseClass {
 
@@ -38,6 +39,7 @@ public class Ohm_directory extends baseClass {
 		PageFactory.initElements(driver, this);
 	}
 
+	@Step("User click on directory and search the user")
 	public void Directorydata() {
 		act = new Actions(driver);
 		utilClass.ClickLinkInUl(driver, "Directory", links);

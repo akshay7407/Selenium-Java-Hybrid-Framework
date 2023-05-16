@@ -14,6 +14,7 @@ import Base_Layer.baseClass;
 import Page_Layer.AdminPage;
 import Page_Layer.HomePage;
 import Page_Layer.LoginPage;
+import io.qameta.allure.Step;
 import listenerPackage.Listneres;
 
 public class homepagetest extends baseClass {
@@ -29,6 +30,7 @@ public class homepagetest extends baseClass {
 	}
 
 	@Test(priority = 1)
+	@Step("Verify the logo of homePage")
 	public void verifyHomepage() {
 
 		Boolean actualLogo = homepage.verifyLogo();
@@ -37,6 +39,7 @@ public class homepagetest extends baseClass {
 	}
 
 	@Test(priority = 2 ,description = "Verify the orangeHrm title after login")
+	@Step("Verify the title of OrangeHrm")
 	public void verifytitle() {
 		Listneres.test.log(Status.INFO, "Get the String of title");
 		String actualTile = homepage.verifyTitle();
@@ -47,7 +50,7 @@ public class homepagetest extends baseClass {
 	}
 
 	@Test
-
+	@Step("Verify the URL of OrangeHrm")
 	public void VerifyUrl() {
 
 		SoftAssert soft = new SoftAssert();
@@ -60,7 +63,7 @@ public class homepagetest extends baseClass {
 	}
 
 	@AfterMethod
-
+	@Step("Close the browser")
 	public void tearDown() {
 		driver.close();
 	}

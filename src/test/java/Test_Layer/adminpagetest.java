@@ -1,6 +1,7 @@
 package Test_Layer;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -8,6 +9,7 @@ import Base_Layer.baseClass;
 import Page_Layer.AdminPage;
 import Page_Layer.HomePage;
 import Page_Layer.LoginPage;
+import io.qameta.allure.Step;
 
 public class adminpagetest extends baseClass {
 	LoginPage loginpage;
@@ -26,15 +28,20 @@ public class adminpagetest extends baseClass {
 	}
 
 	@Test
-	
+	@Step("Click on Admin and create user")
 	public void userinfo() {
 		
 		
 		obj.adminclick();
 		obj.enterinfo("Isaiah  Hill","charllie.123", "charli123", "charli123", 0, 0);
+		
+		
+	}
+	
+	@AfterClass
+	@Step("Close the broser")
+	public void closeSession() {
 		driver.close();
-		
-		
 	}
 	
 	

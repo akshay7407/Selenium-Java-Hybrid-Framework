@@ -7,7 +7,6 @@
 		<classes>
 			<class name="Test_Layer.homepagetest" />
 			<class name="Test_Layer.logintest" />
-			<class name="Test_Layer.logintest" />
 			<class name = "Test_Layer.adminpagetest"/>
 			<class name = "Test_Layer.Ohm_directoryTest"/>
 		</classes>
