@@ -81,13 +81,13 @@ public class Listneres extends utilClass implements ITestListener{
 	
 	public void onFinish(ITestContext context) {
 		extent.flush();
-		try {
-			// To open extent report after test run 
-			Desktop.getDesktop().browse(new File(System.getProperty("user.dir")+"//report//extentReport.html").toURI());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			// To open extent report after test run 
+//			Desktop.getDesktop().browse(new File(System.getProperty("user.dir")+"//report//extentReport.html").toURI());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 	}
 	
