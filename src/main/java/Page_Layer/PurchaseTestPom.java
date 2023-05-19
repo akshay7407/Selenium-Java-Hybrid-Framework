@@ -9,11 +9,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Base_Layer.baseClass;
+import io.qameta.allure.Step;
 
 public class PurchaseTestPom extends baseClass {
 
 	String pro = "adidas original";
-	
+
 	@FindBy(css = "#userEmail")
 	WebElement txtUserName;
 
@@ -29,25 +30,26 @@ public class PurchaseTestPom extends baseClass {
 //	
 //	@FindBy (css ="")
 //	WebElement ;
-	
-	
-	// Passing dynamic locator 
+
+	// Passing dynamic locator
 	public WebElement buttonAddTocart(String dynamicValue) {
-        String locator = String.format("//b[text()='%s']/../following-sibling::button[2]", dynamicValue);
-        return driver.findElement(By.xpath(locator));
-    }
+		String locator = String.format("//b[text()='%s']/../following-sibling::button[2]", dynamicValue);
+		return driver.findElement(By.xpath(locator));
+	}
 
 	public PurchaseTestPom() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void loginToPurchasePage() {
+	@Step("Login to shoppping website")
+	public void loginToPurchasePage(String username , String pass) {
 
-		txtUserName.sendKeys("widam62568@ascalus.com");
-		txtPass.sendKeys("Akshay@6128");
+		txtUserName.sendKeys(username);
+		txtPass.sendKeys(pass);
 		btnSubmit.click();
 	}
 
+	@Step("Add product to kart")
 	public void filterProduct() {
 
 		buttonAddTocart("adidas original").click();

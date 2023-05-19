@@ -5,6 +5,7 @@
     <classes>
       <class name="Test_Layer.PucrhaseTest">
         <methods>
+          <include name="tearDown"/>
           <include name="initalize"/>
           <include name="createPurchaseOrder"/>
         </methods>

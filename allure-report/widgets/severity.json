@@ -1,1 +1,0 @@
-[{"uid":"5c527f0056073fdd","name":"Verify the orangeHrm title after login","time":{"start":1684425902363,"stop":1684425902496,"duration":133},"status":"passed","severity":"normal"},{"uid":"3c079ece8ad0c6a7","name":"This is the login test ","time":{"start":1684425902691,"stop":1684425923134,"duration":20443},"status":"passed","severity":"critical"}]

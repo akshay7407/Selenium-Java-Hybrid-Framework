@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15957" started-at="2023-05-19T16:02:33 IST" finished-at="2023-05-19T16:02:49 IST">
+  <suite name="Suite" duration-ms="13834" started-at="2023-05-19T18:35:36 IST" finished-at="2023-05-19T18:35:50 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15957" started-at="2023-05-19T16:02:33 IST" finished-at="2023-05-19T16:02:49 IST">
-      <class name="selenium_Practice.HashMapTest">
-        <test-method status="PASS" signature="hashMapT()[pri:0, instance:selenium_Practice.HashMapTest@63f34b70]" name="hashMapT" duration-ms="15601" started-at="2023-05-19T16:02:34 IST" finished-at="2023-05-19T16:02:49 IST">
+    <test name="Purchase Test" duration-ms="13834" started-at="2023-05-19T18:35:36 IST" finished-at="2023-05-19T18:35:50 IST">
+      <class name="Test_Layer.PucrhaseTest">
+        <test-method status="PASS" signature="initalize()[pri:0, instance:Test_Layer.PucrhaseTest@22590e3e]" name="initalize" is-config="true" duration-ms="8797" started-at="2023-05-19T18:35:36 IST" finished-at="2023-05-19T18:35:45 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hashMapT -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium_Practice.HashMapTest@63f34b70]" name="tearDown" is-config="true" duration-ms="4" started-at="2023-05-19T16:02:49 IST" finished-at="2023-05-19T16:02:49 IST">
+        </test-method> <!-- initalize -->
+        <test-method status="PASS" signature="createPurchaseOrder()[pri:0, instance:Test_Layer.PucrhaseTest@22590e3e]" name="createPurchaseOrder" duration-ms="2187" started-at="2023-05-19T18:35:45 IST" description="Create purchase order" finished-at="2023-05-19T18:35:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPurchaseOrder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Layer.PucrhaseTest@22590e3e]" name="tearDown" is-config="true" duration-ms="2082" started-at="2023-05-19T18:35:48 IST" finished-at="2023-05-19T18:35:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- selenium_Practice.HashMapTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Test_Layer.PucrhaseTest -->
+    </test> <!-- Purchase Test -->
+  </suite> <!-- Suite -->
 </testng-results>
