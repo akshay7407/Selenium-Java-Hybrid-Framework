@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -18,16 +19,16 @@ import Util_package.WebEventListener;
 
 
 
+
 public class baseClass   {
 
 
-	public static WebDriver driver;
+	public  static WebDriver driver;
 	public static Properties prop;
 	public static WebEventListener listner;
 	public static EventFiringWebDriver EventDriver;
 	
-
-
+	
 	public baseClass()  {
 		try {
 			prop=new Properties();
@@ -41,7 +42,7 @@ public class baseClass   {
 
 	}
 
-	public static void initalization() {
+	public static void initalization(String url) {
 
 
 
@@ -50,7 +51,6 @@ public class baseClass   {
 
 		if(browsername.equals("chrome"))
 		{
-
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
@@ -80,13 +80,13 @@ public class baseClass   {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty(url));
 
 	}
 	
-	@AfterSuite
+	@AfterTest
 	public void tearDown() {
-		driver.quit();
+		this.driver.quit();
 	}
 
 }

@@ -27,7 +27,7 @@ public class HashMapTest extends baseClass  {
 	public void hashMapT() {
 		String cred = logindata().get("x");
 		String arr []=cred.split("@");
-		initalization();
+		initalization("url");
 		obj = new LoginPage();
 		obj.loginFunctionality(arr[0],arr[1]);
 		System.out.println(arr[0]+"}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}");

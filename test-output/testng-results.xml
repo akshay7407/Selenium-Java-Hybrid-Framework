@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-16T14:06:40 IST" name="Default suite" finished-at="2023-05-16T14:07:28 IST" duration-ms="48337">
+  <suite name="Default suite" duration-ms="15957" started-at="2023-05-19T16:02:33 IST" finished-at="2023-05-19T16:02:49 IST">
     <groups>
     </groups>
-    <test started-at="2023-05-16T14:06:40 IST" name="Default test" finished-at="2023-05-16T14:07:28 IST" duration-ms="48337">
-      <class name="Test_Layer.Ohm_directoryTest">
-        <test-method is-config="true" signature="basicIntialization()[pri:0, instance:Test_Layer.Ohm_directoryTest@56c4278e]" started-at="2023-05-16T14:06:40 IST" name="basicIntialization" finished-at="2023-05-16T14:07:24 IST" duration-ms="44765" status="PASS">
+    <test name="Default test" duration-ms="15957" started-at="2023-05-19T16:02:33 IST" finished-at="2023-05-19T16:02:49 IST">
+      <class name="selenium_Practice.HashMapTest">
+        <test-method status="PASS" signature="hashMapT()[pri:0, instance:selenium_Practice.HashMapTest@63f34b70]" name="hashMapT" duration-ms="15601" started-at="2023-05-19T16:02:34 IST" finished-at="2023-05-19T16:02:49 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basicIntialization -->
-        <test-method signature="directory()[pri:0, instance:Test_Layer.Ohm_directoryTest@56c4278e]" started-at="2023-05-16T14:07:24 IST" name="directory" description="Enter directory tab and search the user" finished-at="2023-05-16T14:07:27 IST" duration-ms="2785" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- directory -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Test_Layer.Ohm_directoryTest@56c4278e]" started-at="2023-05-16T14:07:27 IST" name="teardown" finished-at="2023-05-16T14:07:28 IST" duration-ms="525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.Ohm_directoryTest@56c4278e]" started-at="2023-05-16T14:07:28 IST" name="tearDown" finished-at="2023-05-16T14:07:28 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- hashMapT -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium_Practice.HashMapTest@63f34b70]" name="tearDown" is-config="true" duration-ms="4" started-at="2023-05-19T16:02:49 IST" finished-at="2023-05-19T16:02:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Layer.Ohm_directoryTest -->
+      </class> <!-- selenium_Practice.HashMapTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

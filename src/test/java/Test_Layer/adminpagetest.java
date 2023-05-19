@@ -19,7 +19,7 @@ public class adminpagetest extends baseClass {
 	@BeforeClass
 	
 	public void setup() {
-		initalization();
+		initalization("url");
 		loginpage = new LoginPage();
 		loginpage.loginFunctionality("Admin", "admin123");
 		homepage = new HomePage();

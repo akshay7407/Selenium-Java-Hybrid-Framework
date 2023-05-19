@@ -17,7 +17,7 @@ public class logintest extends  baseClass {
 	@Severity(SeverityLevel.CRITICAL)
 	public void loginFunctionality() {
 	
-		initalization();
+		initalization("url");
 		
 		LoginPage obj=new LoginPage();
 		

@@ -17,7 +17,7 @@ public class subscribetest extends baseClass{
 	@BeforeClass
 	
 	public void setup() {
-		baseClass.initalization();
+		baseClass.initalization("url");
 		LoginPage  obj1=new LoginPage();
 		obj1.loginFunctionality("Admin", "admin123");
 		

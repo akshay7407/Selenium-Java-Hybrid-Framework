@@ -16,7 +16,7 @@ public class Ohm_directoryTest extends baseClass {
 	@BeforeMethod
 	@Step("Basic Initalization of browser and login process")
 	public void basicIntialization() {
-		baseClass.initalization();
+		baseClass.initalization("url");
 		LoginPage obj1 = new LoginPage();
 		obj1.loginFunctionality("Admin", "admin123");
 	}

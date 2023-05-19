@@ -23,7 +23,7 @@ public class homepagetest extends baseClass {
 
 	@BeforeMethod
 	public void setUp() {
-		initalization();
+		initalization("url");
 		loginpage = new LoginPage();
 		loginpage.loginFunctionality(prop.getProperty("username"), prop.getProperty("password"));
 		homepage = new HomePage();
