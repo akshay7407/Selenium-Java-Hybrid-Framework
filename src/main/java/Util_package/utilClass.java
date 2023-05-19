@@ -63,6 +63,14 @@ public static int CountDropDownIteams(WebElement wb, String text) {
 		
 	}
 	
+	//animation invisibility class
+	public static void animationInvisibility(By wb) {
+		
+		WebDriverWait wait=new WebDriverWait(driver, 40);	
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(wb));
+		
+	}
+	
 	//ParentFrame
 	public static void MainFrame(WebElement wb) {
 		driver.switchTo().frame(wb);

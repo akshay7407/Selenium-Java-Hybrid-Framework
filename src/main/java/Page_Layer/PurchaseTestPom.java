@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Base_Layer.baseClass;
+import Util_package.utilClass;
 import io.qameta.allure.Step;
 
 public class PurchaseTestPom extends baseClass {
@@ -28,8 +29,8 @@ public class PurchaseTestPom extends baseClass {
 	List<WebElement> products;
 
 //	
-//	@FindBy (css ="")
-//	WebElement ;
+	@FindBy (css ="#toast-container")
+	WebElement popUpProductAdd;
 
 	// Passing dynamic locator
 	public WebElement buttonAddTocart(String dynamicValue) {
@@ -53,5 +54,7 @@ public class PurchaseTestPom extends baseClass {
 	public void filterProduct() {
 
 		buttonAddTocart("adidas original").click();
+		utilClass.explicitwait(By.cssSelector("#toast-container"));
+		utilClass.animationInvisibility(By.cssSelector(".ng-animating"));
 	}
 }
