@@ -1,1 +1,0 @@
-{"uuid":"98b35efd-ff77-4d22-9ce1-349c56d01cca","name":"Purchase Test","children":["4c3f52fa-b1bc-4074-8201-0f5769369897"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1684501548421,"stop":1684501550502}],"links":[],"start":1684501536675,"stop":1684501550533}

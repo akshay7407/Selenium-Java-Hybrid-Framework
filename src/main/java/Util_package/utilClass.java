@@ -10,6 +10,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +20,7 @@ import Base_Layer.baseClass;
 public class utilClass extends baseClass{
 	
 public static Select sel;
+
 	
 	public static void selectbyindex(WebElement wb,int index) {
 		
@@ -66,8 +68,8 @@ public static int CountDropDownIteams(WebElement wb, String text) {
 	//animation invisibility class
 	public static void animationInvisibility(By wb) {
 		
-		WebDriverWait wait=new WebDriverWait(driver, 40);	
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(wb));
+		WebDriverWait wait=new WebDriverWait(driver, 10);	
+		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(wb)));
 		
 	}
 	
@@ -100,6 +102,7 @@ public static int CountDropDownIteams(WebElement wb, String text) {
             }
         }
     }
+	
 	
 
 }

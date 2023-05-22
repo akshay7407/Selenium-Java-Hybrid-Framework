@@ -48,15 +48,17 @@ public class Listneres extends utilClass implements ITestListener{
 	    }
 
 	public void onTestFailure(ITestResult result) {
+		// To attach screenshot to extent report
 		extentTest.get().fail(result.getThrowable());
         String filepath = null ;
 		try {
 		 filepath =TakeScreenShot(result.getMethod().getMethodName());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		test.addScreenCaptureFromPath(filepath ,result.getMethod().getMethodName());
+		
+		// To attach screenshot to allure report
 		   saveScreenshot(result.getName(), driver);
 	}
 
