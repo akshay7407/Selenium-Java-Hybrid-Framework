@@ -46,7 +46,7 @@ public class PurchaseTestPom extends baseClass {
 	@FindBy(css="[placeholder='Select Country']")
 	WebElement  ddSelectCountry  ;
 	
-	@FindBy(css ="a.action__submit@")
+	@FindBy(css ="a.action__submit")
 	WebElement btnPlaceOrder ;
 	
 	@FindBy(css ="button.ta-item:nth-of-type(2)")
