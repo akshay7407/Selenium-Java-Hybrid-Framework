@@ -35,14 +35,13 @@ public class PucrhaseTest extends baseClass {
 	
 	@Test (priority = 1)
 	
-	public void verifyProductIsAddedToCart() throws InterruptedException {
+	public void VerifyProductIsAddedToCart() throws InterruptedException {
 		String cartProduct =element.verifyProduct();
 		Assert.assertEquals(cartProduct , element.pro);
 	}
 	
 	@Test (priority = 2)
-	
-	public void confirmShipping()  {
+	public void ConfirmShippingAndPlaceOrder()  {
      element.enterShippingInfo();
 		
 	}

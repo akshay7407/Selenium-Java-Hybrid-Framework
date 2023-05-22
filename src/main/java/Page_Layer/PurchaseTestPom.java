@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import Base_Layer.baseClass;
 import Util_package.Action;
@@ -51,6 +52,9 @@ public class PurchaseTestPom extends baseClass {
 	
 	@FindBy(css ="button.ta-item:nth-of-type(2)")
 	WebElement country ;
+	
+	@FindBy(css =".hero-primary")
+	WebElement confirmMsg ;
 
 	// Passing dynamic locator
 	public WebElement buttonAddTocart(String dynamicValue) {
@@ -87,11 +91,13 @@ public class PurchaseTestPom extends baseClass {
 		return status ;	
 	}
 	
-	@Step("Enter shipping info and payment information")
+	@Step("Enter shipping info and payment information and Place the order")
 	public void enterShippingInfo()  {
 		
 		Action.pressKey(ddSelectCountry,"india");
 	     country.click();
 	     Javascriptexe.ClickonElementUsingJS(btnPlaceOrder);
+	     String confirmation = confirmMsg.getText();
+	     Assert.assertTrue(confirmation.equalsIgnoreCase("Thankyou for the order."));
 	}
 }
