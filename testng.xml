@@ -1,4 +1,4 @@
-<suite name="Suite">
+<suite name="Smoke Suite">
 	<listeners>
 		<listener class-name="listenerPackage.Listneres" />
 		<listener class-name="listenerPackage.AnnotationTransformer" />
@@ -13,7 +13,7 @@
 			</methods>
 			<class name="Test_Layer.logintest" />
 			<methods>
-			<include name = "loginFunctionality">/</include>
+				<include name="loginFunctionality">/</include>
 			</methods>
 		</classes>
 	</test> <!-- Test -->

@@ -1,14 +1,15 @@
-<suite name="Suite">
+<suite name="Regression Suite">
 	<listeners>
 		<listener class-name="listenerPackage.Listneres" />
 		<listener class-name="listenerPackage.IReport" />
 	</listeners>
-	<test name="Test">
+	<test name="Regression test">
 		<classes>
 			<class name="Test_Layer.homepagetest" />
 			<class name="Test_Layer.logintest" />
-			<class name = "Test_Layer.adminpagetest"/>
-			<class name = "Test_Layer.Ohm_directoryTest"/>
+			<class name="Test_Layer.adminpagetest" />
+			<class name="Test_Layer.Ohm_directoryTest" />
+			<class name="Test_Layer.PucrhaseTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

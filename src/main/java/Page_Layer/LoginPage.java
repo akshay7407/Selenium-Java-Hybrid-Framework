@@ -1,5 +1,6 @@
 package Page_Layer;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,9 @@ import Base_Layer.baseClass;
 import Util_package.Javascriptexe;
 import io.qameta.allure.Step;
 
-public class LoginPage  extends  baseClass {
+public class LoginPage extends baseClass  {
+	
+	
 	
 	// POM with page story
 
@@ -23,7 +26,7 @@ public class LoginPage  extends  baseClass {
 		WebElement loginButton;
 
 		public LoginPage() {
-			PageFactory.initElements(EventDriver, this);
+			PageFactory.initElements(driver, this);
 		}
 
 		// assiociated methods

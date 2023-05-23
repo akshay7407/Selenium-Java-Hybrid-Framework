@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="listenerPackage.Listneres"/>
+    <listener class-name="listenerPackage.AnnotationTransformer"/>
+    <listener class-name="listenerPackage.IReport"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Run the Test using include method(failed)" parallel="classes">
     <classes>
-      <class name="Test_Layer.PucrhaseTest">
+      <class name="Test_Layer.logintest">
         <methods>
           <include name="tearDown"/>
-          <include name="TC002"/>
-          <include name="initalize"/>
+          <include name="loginFunctionality"/>
         </methods>
-      </class> <!-- Test_Layer.PucrhaseTest -->
+      </class> <!-- Test_Layer.logintest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Run the Test using include method(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,13 +1,14 @@
 package Page_Layer;
 
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Base_Layer.baseClass;
 
-public class HomePage extends  baseClass {
+public class HomePage extends baseClass  {
 
 	@FindBy(xpath="//img[@alt='client brand banner']")
 	WebElement Logo;
