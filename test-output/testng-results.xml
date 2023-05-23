@@ -2,34 +2,34 @@
 <testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-23T12:48:16 IST" name="Smoke Suite" finished-at="2023-05-23T12:48:34 IST" duration-ms="18128">
+  <suite started-at="2023-05-23T12:56:05 IST" name="Smoke Suite" finished-at="2023-05-23T12:56:22 IST" duration-ms="17253">
     <groups>
     </groups>
-    <test started-at="2023-05-23T12:48:16 IST" name="Run the Test using include method" finished-at="2023-05-23T12:48:34 IST" duration-ms="18128">
-      <class name="Test_Layer.logintest">
-        <test-method signature="loginFunctionality()[pri:0, instance:Test_Layer.logintest@32120956]" started-at="2023-05-23T12:48:27 IST" name="loginFunctionality" description="This is the login test " finished-at="2023-05-23T12:48:34 IST" duration-ms="6869" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.logintest@32120956]" started-at="2023-05-23T12:48:34 IST" name="tearDown" finished-at="2023-05-23T12:48:34 IST" duration-ms="67" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test_Layer.logintest -->
+    <test started-at="2023-05-23T12:56:05 IST" name="Run the Test using include method" finished-at="2023-05-23T12:56:22 IST" duration-ms="17253">
       <class name="Test_Layer.homepagetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:16 IST" name="setUp" finished-at="2023-05-23T12:48:26 IST" duration-ms="10127" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Layer.homepagetest@5438c17a]" started-at="2023-05-23T12:56:05 IST" name="setUp" finished-at="2023-05-23T12:56:14 IST" duration-ms="8790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifytitle()[pri:2, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:26 IST" name="verifytitle" description="Verify the orangeHrm title after login" finished-at="2023-05-23T12:48:26 IST" duration-ms="445" status="PASS">
+        <test-method signature="verifytitle()[pri:2, instance:Test_Layer.homepagetest@5438c17a]" started-at="2023-05-23T12:56:14 IST" name="verifytitle" description="Verify the orangeHrm title after login" finished-at="2023-05-23T12:56:15 IST" duration-ms="973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifytitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:27 IST" name="tearDown" finished-at="2023-05-23T12:48:27 IST" duration-ms="231" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.homepagetest@5438c17a]" started-at="2023-05-23T12:56:15 IST" name="tearDown" finished-at="2023-05-23T12:56:16 IST" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Test_Layer.homepagetest -->
+      <class name="Test_Layer.logintest">
+        <test-method signature="loginFunctionality()[pri:0, instance:Test_Layer.logintest@4cc7d00d]" started-at="2023-05-23T12:56:16 IST" name="loginFunctionality" description="This is the login test " finished-at="2023-05-23T12:56:22 IST" duration-ms="6853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.logintest@4cc7d00d]" started-at="2023-05-23T12:56:22 IST" name="tearDown" finished-at="2023-05-23T12:56:22 IST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test_Layer.logintest -->
     </test> <!-- Run the Test using include method -->
   </suite> <!-- Smoke Suite -->
 </testng-results>
