@@ -6,7 +6,7 @@
       <class name="Test_Layer.PucrhaseTest">
         <methods>
           <include name="tearDown"/>
-          <include name="confirmShipping"/>
+          <include name="TC002"/>
           <include name="initalize"/>
         </methods>
       </class> <!-- Test_Layer.PucrhaseTest -->

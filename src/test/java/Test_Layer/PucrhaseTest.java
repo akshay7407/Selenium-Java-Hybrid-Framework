@@ -1,6 +1,5 @@
 package Test_Layer;
 
-
 import static org.testng.Assert.assertEquals;
 
 import org.testng.Assert;
@@ -13,36 +12,37 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 
-
 public class PucrhaseTest extends baseClass {
 	PurchaseTestPom element;
 
 	@BeforeClass
 	@Step("Initialize the browser")
 	public void initalize() {
-        initalization("purchaseUrl");
+		initalization("purchaseUrl");
 		element = new PurchaseTestPom();
+		element.loginToPurchasePage(prop.getProperty("user"), prop.getProperty("pass"));
 	}
 
-	@Test (description = "Create purchase order" ,priority = 0)
-    @Severity(SeverityLevel.NORMAL)
+	@Test(description = "Create purchase order", priority = 0)
+	@Severity(SeverityLevel.NORMAL)
 	public void TC001() {
-		element.loginToPurchasePage(prop.getProperty("user"), prop.getProperty("pass"));
-		String title =driver.getTitle();
+		String title = driver.getTitle();
 		Assert.assertEquals(title, "Let's Shop");
 		element.filterProduct();
 	}
-	
-	@Test (priority = 1 , description =  "Verify Product Is Added To Cart")
-	
+
+	@Test(priority = 1, description = "Verify Product Is Added To Cart")
+
 	public void TC002() throws InterruptedException {
-		String cartProduct =element.verifyProduct();
-		Assert.assertEquals(cartProduct , element.pro);
+		String cartProduct = element.verifyProduct();
+		Assert.assertEquals(cartProduct, element.pro);
 	}
-	
-	@Test (priority = 2 ,description = "Confirm Shipping And Place Order")
-	public void TC003()  {
-     element.enterShippingInfo();
-		
+
+	@Test(priority = 2, description = "Confirm Shipping And Place Order")
+	public void TC003() {
+		String confirmation = element.enterShippingInfo();
+		Assert.assertTrue(confirmation.equalsIgnoreCase("Thankyou for the order."));
+
 	}
+
 }

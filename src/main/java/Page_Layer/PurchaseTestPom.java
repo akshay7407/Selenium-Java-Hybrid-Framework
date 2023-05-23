@@ -15,7 +15,7 @@ import Util_package.Javascriptexe;
 import Util_package.utilClass;
 import io.qameta.allure.Step;
 
-public class PurchaseTestPom extends baseClass {
+public class PurchaseTestPom extends baseClass{
 
   public  static String pro = "ZARA COAT 3";
 
@@ -92,12 +92,12 @@ public class PurchaseTestPom extends baseClass {
 	}
 	
 	@Step("Enter shipping info and payment information and Place the order")
-	public void enterShippingInfo()  {
+	public String enterShippingInfo()  {
 		
 		Action.pressKey(ddSelectCountry,"india");
 	     country.click();
 	     Javascriptexe.ClickonElementUsingJS(btnPlaceOrder);
 	     String confirmation = confirmMsg.getText();
-	     Assert.assertTrue(confirmation.equalsIgnoreCase("Thankyou for the order."));
+	     return confirmation ;
 	}
 }
