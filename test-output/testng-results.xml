@@ -2,30 +2,30 @@
 <testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-23T12:44:52 IST" name="Smoke Suite" finished-at="2023-05-23T12:45:17 IST" duration-ms="24337">
+  <suite started-at="2023-05-23T12:48:16 IST" name="Smoke Suite" finished-at="2023-05-23T12:48:34 IST" duration-ms="18128">
     <groups>
     </groups>
-    <test started-at="2023-05-23T12:44:52 IST" name="Run the Test using include method" finished-at="2023-05-23T12:45:17 IST" duration-ms="24337">
+    <test started-at="2023-05-23T12:48:16 IST" name="Run the Test using include method" finished-at="2023-05-23T12:48:34 IST" duration-ms="18128">
       <class name="Test_Layer.logintest">
-        <test-method signature="loginFunctionality()[pri:0, instance:Test_Layer.logintest@6975fb1c]" started-at="2023-05-23T12:45:04 IST" name="loginFunctionality" description="This is the login test " finished-at="2023-05-23T12:45:17 IST" duration-ms="12179" status="PASS">
+        <test-method signature="loginFunctionality()[pri:0, instance:Test_Layer.logintest@32120956]" started-at="2023-05-23T12:48:27 IST" name="loginFunctionality" description="This is the login test " finished-at="2023-05-23T12:48:34 IST" duration-ms="6869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.logintest@6975fb1c]" started-at="2023-05-23T12:45:17 IST" name="tearDown" finished-at="2023-05-23T12:45:17 IST" duration-ms="71" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.logintest@32120956]" started-at="2023-05-23T12:48:34 IST" name="tearDown" finished-at="2023-05-23T12:48:34 IST" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Test_Layer.logintest -->
       <class name="Test_Layer.homepagetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Layer.homepagetest@51fc862e]" started-at="2023-05-23T12:44:52 IST" name="setUp" finished-at="2023-05-23T12:45:03 IST" duration-ms="10967" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:16 IST" name="setUp" finished-at="2023-05-23T12:48:26 IST" duration-ms="10127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifytitle()[pri:2, instance:Test_Layer.homepagetest@51fc862e]" started-at="2023-05-23T12:45:04 IST" name="verifytitle" description="Verify the orangeHrm title after login" finished-at="2023-05-23T12:45:04 IST" duration-ms="423" status="PASS">
+        <test-method signature="verifytitle()[pri:2, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:26 IST" name="verifytitle" description="Verify the orangeHrm title after login" finished-at="2023-05-23T12:48:26 IST" duration-ms="445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifytitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.homepagetest@51fc862e]" started-at="2023-05-23T12:45:04 IST" name="tearDown" finished-at="2023-05-23T12:45:04 IST" duration-ms="247" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.homepagetest@4f2d014a]" started-at="2023-05-23T12:48:27 IST" name="tearDown" finished-at="2023-05-23T12:48:27 IST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
