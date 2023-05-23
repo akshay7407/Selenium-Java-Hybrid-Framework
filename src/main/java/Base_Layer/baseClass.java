@@ -51,10 +51,8 @@ public class baseClass   {
 
 		if(browsername.equals("chrome"))
 		{
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 		}
 
 		else if (browsername.equals("edge")) {
