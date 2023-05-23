@@ -5,7 +5,7 @@
 		<listener class-name="listenerPackage.Listneres" />
 		<listener class-name="listenerPackage.IReport" />
 	</listeners>
-	<test thread-count="5" parallel="tests" name="CrossBrowserTesting">
+	<test thread-count="5" parallel="methods" name="CrossBrowserTesting">
 		<classes>
 			<class name="selenium_Practice.parallelTests" />
 		</classes>

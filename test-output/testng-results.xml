@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12190" started-at="2023-05-22T15:42:38 IST" finished-at="2023-05-22T15:42:50 IST">
+  <suite name="Suite" duration-ms="13438" started-at="2023-05-23T10:26:03 IST" finished-at="2023-05-23T10:26:16 IST">
     <groups>
     </groups>
-    <test name="Purchase Test" duration-ms="12190" started-at="2023-05-22T15:42:38 IST" finished-at="2023-05-22T15:42:50 IST">
+    <test name="Purchase Test" duration-ms="13438" started-at="2023-05-23T10:26:03 IST" finished-at="2023-05-23T10:26:16 IST">
       <class name="Test_Layer.PucrhaseTest">
-        <test-method status="PASS" signature="initalize()[pri:0, instance:Test_Layer.PucrhaseTest@43f61afb]" name="initalize" is-config="true" duration-ms="6392" started-at="2023-05-22T15:42:38 IST" finished-at="2023-05-22T15:42:44 IST">
+        <test-method status="PASS" signature="initalize()[pri:0, instance:Test_Layer.PucrhaseTest@431f1eaf]" name="initalize" is-config="true" duration-ms="6700" started-at="2023-05-23T10:26:03 IST" finished-at="2023-05-23T10:26:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalize -->
-        <test-method status="PASS" signature="createPurchaseOrder()[pri:0, instance:Test_Layer.PucrhaseTest@43f61afb]" name="createPurchaseOrder" duration-ms="2337" started-at="2023-05-22T15:42:44 IST" description="Create purchase order" finished-at="2023-05-22T15:42:46 IST">
+        <test-method status="PASS" signature="TC001()[pri:0, instance:Test_Layer.PucrhaseTest@431f1eaf]" name="TC001" duration-ms="3070" started-at="2023-05-23T10:26:10 IST" description="Create purchase order" finished-at="2023-05-23T10:26:13 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPurchaseOrder -->
-        <test-method status="PASS" signature="VerifyProductIsAddedToCart()[pri:1, instance:Test_Layer.PucrhaseTest@43f61afb]" name="VerifyProductIsAddedToCart" duration-ms="656" started-at="2023-05-22T15:42:47 IST" finished-at="2023-05-22T15:42:47 IST">
+        </test-method> <!-- TC001 -->
+        <test-method status="PASS" signature="TC002()[pri:1, instance:Test_Layer.PucrhaseTest@431f1eaf]" name="TC002" duration-ms="506" started-at="2023-05-23T10:26:14 IST" description="Verify Product Is Added To Cart" finished-at="2023-05-23T10:26:14 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyProductIsAddedToCart -->
-        <test-method status="PASS" signature="ConfirmShippingAndPlaceOrder()[pri:2, instance:Test_Layer.PucrhaseTest@43f61afb]" name="ConfirmShippingAndPlaceOrder" duration-ms="1144" started-at="2023-05-22T15:42:47 IST" finished-at="2023-05-22T15:42:49 IST">
+        </test-method> <!-- TC002 -->
+        <test-method status="PASS" signature="TC003()[pri:2, instance:Test_Layer.PucrhaseTest@431f1eaf]" name="TC003" duration-ms="973" started-at="2023-05-23T10:26:14 IST" description="Confirm Shipping And Place Order" finished-at="2023-05-23T10:26:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ConfirmShippingAndPlaceOrder -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Layer.PucrhaseTest@43f61afb]" name="tearDown" is-config="true" duration-ms="1213" started-at="2023-05-22T15:42:49 IST" finished-at="2023-05-22T15:42:50 IST">
+        </test-method> <!-- TC003 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Layer.PucrhaseTest@431f1eaf]" name="tearDown" is-config="true" duration-ms="1175" started-at="2023-05-23T10:26:15 IST" finished-at="2023-05-23T10:26:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

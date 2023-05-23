@@ -26,22 +26,22 @@ public class PucrhaseTest extends baseClass {
 
 	@Test (description = "Create purchase order" ,priority = 0)
     @Severity(SeverityLevel.NORMAL)
-	public void createPurchaseOrder() {
+	public void TC001() {
 		element.loginToPurchasePage(prop.getProperty("user"), prop.getProperty("pass"));
 		String title =driver.getTitle();
 		Assert.assertEquals(title, "Let's Shop");
 		element.filterProduct();
 	}
 	
-	@Test (priority = 1)
+	@Test (priority = 1 , description =  "Verify Product Is Added To Cart")
 	
-	public void VerifyProductIsAddedToCart() throws InterruptedException {
+	public void TC002() throws InterruptedException {
 		String cartProduct =element.verifyProduct();
 		Assert.assertEquals(cartProduct , element.pro);
 	}
 	
-	@Test (priority = 2)
-	public void ConfirmShippingAndPlaceOrder()  {
+	@Test (priority = 2 ,description = "Confirm Shipping And Place Order")
+	public void TC003()  {
      element.enterShippingInfo();
 		
 	}
