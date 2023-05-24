@@ -28,19 +28,19 @@ public class PucrhaseTest extends baseClass {
 	public void TC001() {
 		String title = driver.getTitle();
 		Assert.assertEquals(title, "Let's Shop");
-		element.filterProduct();
+		element.getProductByName(element.product);
 	}
 
 	@Test(priority = 1, description = "Verify Product Is Added To Cart")
 
 	public void TC002() throws InterruptedException {
-		String cartProduct = element.verifyProduct();
-		Assert.assertEquals(cartProduct, element.pro);
+		String cartProduct = element.verifyProductAddToCart();
+		Assert.assertEquals(cartProduct, "ZARA COAT 3");
 	}
 
 	@Test(priority = 2, description = "Confirm Shipping And Place Order")
 	public void TC003() {
-		String confirmation = element.enterShippingInfo();
+		String confirmation = element.enterShippingInfo(element.Country);
 		Assert.assertTrue(confirmation.equalsIgnoreCase("Thankyou for the order."));
 
 	}

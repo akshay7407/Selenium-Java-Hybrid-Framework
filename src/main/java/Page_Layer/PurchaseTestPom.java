@@ -17,7 +17,8 @@ import io.qameta.allure.Step;
 
 public class PurchaseTestPom extends baseClass{
 
-  public  static String pro = "ZARA COAT 3";
+  public  static String product = "zara coat 3";
+  public static String Country = "india";
 
 	@FindBy(css = "#userEmail")
 	WebElement txtUserName;
@@ -75,16 +76,16 @@ public class PurchaseTestPom extends baseClass{
 	}
 
 	@Step("Add product to kart")
-	public void filterProduct() {
+	public void getProductByName(String productName) {
 
-		buttonAddTocart("zara coat 3").click();
+		buttonAddTocart(productName).click();
 		utilClass.explicitwait(By.cssSelector("#toast-container"));
 		utilClass.animationInvisibility(By.cssSelector(".ng-animating"));
 	}
 	
 	@Step("Click on cart and verify products")
 	
-	public String verifyProduct() {
+	public String verifyProductAddToCart() {
 		btnCart.click();
 		String status =cartProducts.getText();
 		btnCheckout.click();
@@ -92,9 +93,9 @@ public class PurchaseTestPom extends baseClass{
 	}
 	
 	@Step("Enter shipping info and payment information and Place the order")
-	public String enterShippingInfo()  {
+	public String enterShippingInfo(String countryName)  {
 		
-		Action.pressKey(ddSelectCountry,"india");
+		Action.pressKey(ddSelectCountry,countryName);
 	     country.click();
 	     Javascriptexe.ClickonElementUsingJS(btnPlaceOrder);
 	     String confirmation = confirmMsg.getText();

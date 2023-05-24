@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-23T13:12:03 IST" name="Smoke Suite" finished-at="2023-05-23T13:12:24 IST" duration-ms="20986">
+  <suite started-at="2023-05-24T09:42:06 IST" name="Suite" finished-at="2023-05-24T09:42:16 IST" duration-ms="9940">
     <groups>
     </groups>
-    <test started-at="2023-05-23T13:12:03 IST" name="Run the Test using include method" finished-at="2023-05-23T13:12:24 IST" duration-ms="20986">
-      <class name="Test_Layer.logintest">
-        <test-method signature="loginFunctionality()[pri:0, instance:Test_Layer.logintest@2e4389ed]" started-at="2023-05-23T13:12:14 IST" name="loginFunctionality" description="This is the login test " finished-at="2023-05-23T13:12:24 IST" duration-ms="9673" status="PASS">
+    <test started-at="2023-05-24T09:42:06 IST" name="Purchase Test" finished-at="2023-05-24T09:42:16 IST" duration-ms="9940">
+      <class name="Test_Layer.PucrhaseTest">
+        <test-method is-config="true" signature="initalize()[pri:0, instance:Test_Layer.PucrhaseTest@75e09567]" started-at="2023-05-24T09:42:06 IST" name="initalize" finished-at="2023-05-24T09:42:12 IST" duration-ms="5964" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.logintest@2e4389ed]" started-at="2023-05-23T13:12:24 IST" name="tearDown" finished-at="2023-05-23T13:12:24 IST" duration-ms="61" status="PASS">
+        </test-method> <!-- initalize -->
+        <test-method signature="TC001()[pri:0, instance:Test_Layer.PucrhaseTest@75e09567]" started-at="2023-05-24T09:42:12 IST" name="TC001" description="Create purchase order" finished-at="2023-05-24T09:42:14 IST" duration-ms="1971" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC001 -->
+        <test-method signature="TC002()[pri:1, instance:Test_Layer.PucrhaseTest@75e09567]" started-at="2023-05-24T09:42:15 IST" name="TC002" description="Verify Product Is Added To Cart" finished-at="2023-05-24T09:42:15 IST" duration-ms="387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC002 -->
+        <test-method signature="TC003()[pri:2, instance:Test_Layer.PucrhaseTest@75e09567]" started-at="2023-05-24T09:42:15 IST" name="TC003" description="Confirm Shipping And Place Order" finished-at="2023-05-24T09:42:16 IST" duration-ms="901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.PucrhaseTest@75e09567]" started-at="2023-05-24T09:42:16 IST" name="tearDown" finished-at="2023-05-24T09:42:16 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Layer.logintest -->
-      <class name="Test_Layer.homepagetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test_Layer.homepagetest@7bdf61ad]" started-at="2023-05-23T13:12:03 IST" name="setUp" finished-at="2023-05-23T13:12:13 IST" duration-ms="9954" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifytitle()[pri:2, instance:Test_Layer.homepagetest@7bdf61ad]" started-at="2023-05-23T13:12:13 IST" name="verifytitle" description="Verify the orangeHrm title after login" finished-at="2023-05-23T13:12:14 IST" duration-ms="458" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifytitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test_Layer.homepagetest@7bdf61ad]" started-at="2023-05-23T13:12:14 IST" name="tearDown" finished-at="2023-05-23T13:12:14 IST" duration-ms="293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test_Layer.homepagetest -->
-    </test> <!-- Run the Test using include method -->
-  </suite> <!-- Smoke Suite -->
+      </class> <!-- Test_Layer.PucrhaseTest -->
+    </test> <!-- Purchase Test -->
+  </suite> <!-- Suite -->
 </testng-results>
