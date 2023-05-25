@@ -3,7 +3,7 @@
 		<listener class-name="listenerPackage.Listneres" />
 		<listener class-name="listenerPackage.IReport" />
 	</listeners>
-	<test thread-count="1" name="Regression test">
+	<test  name="Regression test">
 		<classes>
 			<class name="Test_Layer.homepagetest" />
 			<class name="Test_Layer.logintest" />

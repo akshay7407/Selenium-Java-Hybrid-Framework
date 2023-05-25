@@ -15,7 +15,9 @@ import Util_package.Javascriptexe;
 import Util_package.utilClass;
 import io.qameta.allure.Step;
 
-public class PurchaseTestPom extends baseClass{
+public class PurchaseTestPom {
+	
+	WebDriver driver ;
 
   public  static String product = "zara coat 3";
   public static String Country = "india";
@@ -63,7 +65,8 @@ public class PurchaseTestPom extends baseClass{
 		return driver.findElement(By.xpath(locator));
 	}
 
-	public PurchaseTestPom() {
+	public PurchaseTestPom(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -94,7 +97,6 @@ public class PurchaseTestPom extends baseClass{
 	
 	@Step("Enter shipping info and payment information and Place the order")
 	public String enterShippingInfo(String countryName)  {
-		
 		Action.pressKey(ddSelectCountry,countryName);
 	     country.click();
 	     Javascriptexe.ClickonElementUsingJS(btnPlaceOrder);

@@ -8,8 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import Base_Layer.baseClass;
 
-public class HomePage extends baseClass  {
+public class HomePage   {
 
+	WebDriver driver ;
+	
 	@FindBy(xpath="//img[@alt='client brand banner']")
 	WebElement Logo;
 	
@@ -19,7 +21,8 @@ public class HomePage extends baseClass  {
 	@FindBy(xpath="//b[text()='PIM']")
 	WebElement PIMButton;
 	
-	public HomePage(){
+	public HomePage(WebDriver driver){
+		this.driver =driver ;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -42,7 +45,7 @@ public class HomePage extends baseClass  {
 		
 		adminButton.click();
 		
-		return new AdminPage();
+		return new AdminPage(driver);
 		
 	}
 }

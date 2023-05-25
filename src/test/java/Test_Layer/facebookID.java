@@ -17,7 +17,7 @@ public class facebookID extends baseClass {
 	@BeforeMethod
 
 	public void setup() {
-		baseClass.initalization("url");
+		initalization("url");
 	}
 
 

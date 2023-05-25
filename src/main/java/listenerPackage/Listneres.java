@@ -1,8 +1,5 @@
 package listenerPackage;
 
-import java.awt.Desktop;
-import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
@@ -19,7 +16,6 @@ import com.aventstack.extentreports.Status;
 
 import Util_package.utilClass;
 import extentReportPackage.ExtentReporterNg;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 
 @Listeners

@@ -19,7 +19,7 @@ public class subscribe extends baseClass {
 	
 	public Ohm_directory myinfoo() {
 		myinfo.click();
-		return new Ohm_directory();
+		return new Ohm_directory(driver);
 	}
 	
 	

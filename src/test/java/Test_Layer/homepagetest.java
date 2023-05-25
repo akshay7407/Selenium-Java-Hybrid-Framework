@@ -12,22 +12,22 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.Status;
 
 import Base_Layer.baseClass;
-import Page_Layer.AdminPage;
 import Page_Layer.HomePage;
 import Page_Layer.LoginPage;
 import io.qameta.allure.Step;
 import listenerPackage.Listneres;
 
 public class homepagetest extends baseClass {
-	public static LoginPage loginpage;
+  LoginPage loginpage;
 	HomePage homepage;
 
 	@BeforeMethod
 	public void setUp() {
 		initalization("url");
-		loginpage = new LoginPage();
+		System.out.println("Browser setup by Thread Home "+Thread.currentThread().getId());
+		loginpage = new LoginPage(driver);
 		loginpage.loginFunctionality(prop.getProperty("username"), prop.getProperty("password"));
-		homepage = new HomePage();
+		homepage = new HomePage(driver);
 	}
 
 	@Test(priority = 1)

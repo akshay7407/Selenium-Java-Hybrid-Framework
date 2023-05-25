@@ -2,6 +2,7 @@ package Page_Layer;
 
 import org.apache.poi.hssf.util.HSSFColor.SEA_GREEN;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -13,9 +14,10 @@ import Util_package.Javascriptexe;
 import Util_package.utilClass;
 import io.qameta.allure.Step;
 
-public class Ohm_directory extends baseClass {
+public class Ohm_directory  {
 
 	Actions act;
+	WebDriver driver ;
 
 	String links = "//ul[@class=\"oxd-main-menu\"]";
 
@@ -34,8 +36,8 @@ public class Ohm_directory extends baseClass {
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement searchbtn;
 
-	public Ohm_directory() {
-
+	public Ohm_directory(WebDriver driver) {
+        this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 

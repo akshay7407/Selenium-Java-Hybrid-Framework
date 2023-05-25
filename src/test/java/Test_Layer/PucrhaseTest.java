@@ -19,7 +19,7 @@ public class PucrhaseTest extends baseClass {
 	@Step("Initialize the browser")
 	public void initalize() {
 		initalization("purchaseUrl");
-		element = new PurchaseTestPom();
+		element = new PurchaseTestPom(driver);
 		element.loginToPurchasePage(prop.getProperty("user"), prop.getProperty("pass"));
 	}
 

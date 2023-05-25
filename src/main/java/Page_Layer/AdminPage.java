@@ -1,6 +1,7 @@
 package Page_Layer;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,9 +11,10 @@ import Util_package.Action;
 
 import Util_package.utilClass;
 
-public class AdminPage extends baseClass {
+public class AdminPage  {
 	
 	public Actions act ;
+	WebDriver driver ;
 	 
 	String links = "//ul[@class=\"oxd-main-menu\"]";
 	
@@ -51,7 +53,8 @@ public class AdminPage extends baseClass {
 	WebElement save;
 	
 	
-	public AdminPage () {
+	public AdminPage (WebDriver driver ) {
+		this.driver=driver ;
 		PageFactory.initElements(driver, this);
 	}
 	 public void adminclick() {

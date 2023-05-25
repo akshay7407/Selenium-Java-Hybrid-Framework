@@ -15,38 +15,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- Test_Layer.adminpagetest -->
-      <class name="Test_Layer.Ohm_directoryTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="basicIntialization"/>
-          <include name="directory"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- Test_Layer.Ohm_directoryTest -->
-      <class name="Test_Layer.PucrhaseTest">
-        <methods>
-          <include name="TC003"/>
-          <include name="tearDown"/>
-          <include name="TC001"/>
-          <include name="TC002"/>
-          <include name="initalize"/>
-        </methods>
-      </class> <!-- Test_Layer.PucrhaseTest -->
-      <class name="Test_Layer.homepagetest">
-        <methods>
-          <include name="VerifyUrl"/>
-          <include name="tearDown"/>
-          <include name="verifytitle"/>
-          <include name="setUp"/>
-          <include name="verifyHomepage"/>
-        </methods>
-      </class> <!-- Test_Layer.homepagetest -->
-      <class name="Test_Layer.logintest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="loginFunctionality"/>
-        </methods>
-      </class> <!-- Test_Layer.logintest -->
     </classes>
   </test> <!-- Regression test(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

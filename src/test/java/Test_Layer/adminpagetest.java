@@ -1,6 +1,5 @@
 package Test_Layer;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,11 +19,11 @@ public class adminpagetest extends baseClass {
 	
 	public void setup() {
 		initalization("url");
-		loginpage = new LoginPage();
+		loginpage = new LoginPage(driver);
 		loginpage.loginFunctionality("Admin", "admin123");
-		homepage = new HomePage();
+		homepage = new HomePage(driver);
 		
-	     obj=new AdminPage();
+	     obj=new AdminPage(driver);
 	}
 
 	@Test

@@ -16,14 +16,14 @@ public class Ohm_directoryTest extends baseClass {
 	@BeforeMethod
 	@Step("Basic Initalization of browser and login process")
 	public void basicIntialization() {
-		baseClass.initalization("url");
-		LoginPage obj1 = new LoginPage();
+		initalization("url");
+		LoginPage obj1 = new LoginPage(driver);
 		obj1.loginFunctionality("Admin", "admin123");
 	}
 	@Test (description = "Enter directory tab and search the user")
 	
 	public void directory() {
-	  obj=new Ohm_directory();
+	  obj=new Ohm_directory(driver);
 		obj.Directorydata();
 	}
 	
