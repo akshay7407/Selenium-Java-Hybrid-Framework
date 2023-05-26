@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class baseClass {
 
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	public static Properties prop;
 	public static WebEventListener listner;
 	public static EventFiringWebDriver EventDriver;

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import Base_Layer.baseClass;
 
@@ -12,7 +13,7 @@ public class Javascriptexe extends baseClass {
 
 	public static void ClickonElementUsingJS(WebElement wb) {
 
-		js=(JavascriptExecutor)driver;
+		js=(JavascriptExecutor)driver ;
 		js.executeScript("arguments[0].click();", wb );
 	}
 

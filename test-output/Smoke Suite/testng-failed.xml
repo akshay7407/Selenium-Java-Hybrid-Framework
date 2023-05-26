@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Smoke Suite]">
+<suite name="Failed suite [Smoke Suite]">
   <listeners>
     <listener class-name="listenerPackage.Listneres"/>
     <listener class-name="listenerPackage.AnnotationTransformer"/>
     <listener class-name="listenerPackage.IReport"/>
     <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Run the Test using include methoddd(failed)">
+  <test thread-count="5" parallel="classes" name="Run the Test using include method(failed)">
     <classes>
       <class name="Test_Layer.homepagetest">
         <methods>
@@ -16,6 +16,12 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- Test_Layer.homepagetest -->
+      <class name="Test_Layer.logintest">
+        <methods>
+          <include name="loginFunctionality"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Test_Layer.logintest -->
     </classes>
-  </test> <!-- Run the Test using include methoddd(failed) -->
+  </test> <!-- Run the Test using include method(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->
