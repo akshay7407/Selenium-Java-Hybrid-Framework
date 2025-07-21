@@ -124,9 +124,130 @@ TestNG suite configuration with:
    - Check `Config.Properties` for correct URLs and settings
    - Ensure `testng.xml` has the required test classes configured
 
-## Running Tests
+# Selenium Java Hybrid Framework – Quick Start & Usage Guide
 
-### Method 1: Run Complete Test Suite (Recommended)
+## 1. Prerequisites
+- **Java JDK 8+**: Install and set JAVA_HOME.
+- **Maven**: Install and ensure `mvn` is in your PATH.
+- **Web Browsers**: Chrome, Edge, or Opera installed for testing.
+
+## 2. Getting Started – Step-by-Step After Cloning
+
+### 1. Clone the Repository
+```bash
+git clone <repo-url>
+cd Selenium-Java-Hybrid-Framework
+```
+*Clones the framework and navigates to the project directory.*
+
+### 2. Install Dependencies
+```bash
+mvn clean install
+```
+*Downloads and installs all required dependencies defined in `pom.xml`.*
+
+### 3. Configure the Framework
+- Edit `Config.Properties` for URLs, credentials, and browser settings.
+- Check `testng.xml` for the correct test classes and listener configuration.
+
+### 4. Compile the Project
+```bash
+mvn compile
+```
+*Compiles the source code. Run after cloning or updating dependencies.*
+
+### 5. Run Tests
+- **Run all tests (recommended):**
+  ```bash
+  mvn test
+  ```
+- **Run a specific test class:**
+  ```bash
+  mvn -Dtest=logintest test
+  ```
+- **Run a specific test method:**
+  ```bash
+  mvn -Dtest=logintest#loginFunctionality test
+  ```
+*Note: Individual test runs may not invoke all listeners from `testng.xml`. For full reporting, use the suite.*
+
+### 6. Allure Report Installation & Usage (Optional, for advanced reporting)
+- **Install Allure CLI:**
+  - Download from: https://github.com/allure-framework/allure2/releases
+  - Extract and add the `bin` directory to your system PATH.
+- **Check Maven Integration:**
+  - Ensure your `pom.xml` includes:
+    ```xml
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.13.9</version>
+      <scope>test</scope>
+    </dependency>
+    ```
+- **Generate Allure Results:**
+  ```bash
+  mvn test
+  ```
+- **Serve the Allure Report:**
+  ```bash
+  allure serve target/allure-results
+  ```
+  *Or generate static HTML:*
+  ```bash
+  allure generate target/allure-results --clean
+  allure open allure-report
+  ```
+- **Screenshots on Failure:**
+  - Screenshots are automatically attached to Allure reports via the custom TestNG listener.
+
+## 3. Additional Notes
+- **.gitignore** is configured to exclude generated reports, screenshots, and build artifacts.
+- For troubleshooting, check `target/surefire-reports` and Allure HTML output.
+
+---
+
+## Allure Report Installation & Usage
+
+### Install Allure CLI
+  - Download from: https://github.com/allure-framework/allure2/releases
+  - Extract and add the `bin` directory to your system PATH
+
+### 2.Maven Integration
+- Make sure your `pom.xml` includes the Allure TestNG adapter:
+  ```xml
+  <dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.13.9</version>
+    <scope>test</scope>
+  </dependency>
+  ```
+- Listener is already configured in your framework (see `Listneres.java`).
+
+### 3. Generate Allure Results
+- Run your tests as usual:
+  ```bash
+  mvn test
+  ```
+- Allure results will be generated in `target/allure-results/`
+
+### 4. Generate and View Report
+- Serve the report (opens in browser):
+  ```bash
+  allure serve target/allure-results
+  ```
+- Or generate static HTML report:
+  ```bash
+  allure generate target/allure-results --clean
+  allure open allure-report
+  ```
+
+### 5. Attachments & Screenshots
+- Screenshots on failure are automatically attached to Allure reports via the custom listener.
+
+---
+
 ```bash
 mvn test
 ```
