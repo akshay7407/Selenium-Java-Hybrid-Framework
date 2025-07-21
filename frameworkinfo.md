@@ -114,7 +114,13 @@ TestNG suite configuration with:
    mvn clean install
    ```
 
-3. **Verify Configuration**
+3. **Compile the Project**
+   ```bash
+   mvn compile
+   ```
+   This step is essential for new team members to compile the source code after cloning.
+
+4. **Verify Configuration**
    - Check `Config.Properties` for correct URLs and settings
    - Ensure `testng.xml` has the required test classes configured
 
