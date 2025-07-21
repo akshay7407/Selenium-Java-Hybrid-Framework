@@ -24,7 +24,7 @@ import io.qameta.allure.Attachment;
 public class Listneres extends utilClass implements ITestListener{
      public static ExtentTest test ;
 	ExtentReports extent = ExtentReporterNg.getReporterObject();
-	ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest>() ; //Thread safe
+	public static ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest>() ; //Thread safe
 	
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName()).assignAuthor("Akshay Gaikwad").assignCategory("Testing").assignDevice("windows");

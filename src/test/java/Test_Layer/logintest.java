@@ -25,12 +25,12 @@ public class logintest extends  baseClass {
 		 
 		LoginPage obj=new LoginPage(driver);
 		
-		Listneres.test.log(Status.INFO, "Login to the page using username and credetials");
+		if (Listneres.extentTest.get() != null) Listneres.extentTest.get().log(Status.INFO, "Login to the page using username and credetials");
 		
 		
 		obj.loginFunctionality(prop.getProperty("username"), prop.getProperty("password"));
 		
-		Listneres.test.log(Status.INFO, "Close the chrome browser");
+		if (Listneres.extentTest.get() != null) Listneres.extentTest.get().log(Status.INFO, "Close the chrome browser");
 		
 	}
 	

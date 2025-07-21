@@ -17,6 +17,7 @@ import Page_Layer.LoginPage;
 import io.qameta.allure.Step;
 import listenerPackage.Listneres;
 
+@org.testng.annotations.Listeners(listenerPackage.Listneres.class)
 public class homepagetest extends baseClass {
   LoginPage loginpage;
 	HomePage homepage;
@@ -42,11 +43,11 @@ public class homepagetest extends baseClass {
 	@Test(priority = 2 ,description = "Verify the orangeHrm title after login")
 	@Step("Verify the title of OrangeHrm")
 	public void verifytitle() {
-		Listneres.test.log(Status.INFO, "Get the String of title");
+		if (Listneres.extentTest.get() != null) Listneres.extentTest.get().log(Status.INFO, "Get the String of title");
 		String actualTile = homepage.verifyTitle();
-		Listneres.test.log(Status.INFO, "Add the expected title");
+		if (Listneres.extentTest.get() != null) Listneres.extentTest.get().log(Status.INFO, "Add the expected title");
 		String expectedTitle = "OrangeHRM";
-		Listneres.test.log(Status.INFO, "Verify that title is equal to expected title");
+		if (Listneres.extentTest.get() != null) Listneres.extentTest.get().log(Status.INFO, "Verify that title is equal to expected title");
 		Assert.assertEquals(actualTile, expectedTitle);
 	}
 
