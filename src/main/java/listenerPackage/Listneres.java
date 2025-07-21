@@ -80,6 +80,8 @@ public class Listneres extends utilClass implements ITestListener{
 	
 	public void onFinish(ITestContext context) {
 		extent.flush();
+		System.out.println("ExtentReports flushed successfully!");
+		System.out.println("Report should be available at: " + System.getProperty("user.dir") + java.io.File.separator + "reports" + java.io.File.separator + "extentReport.html");
 //		try {
 //			// To open extent report after test run 
 //			Desktop.getDesktop().browse(new File(System.getProperty("user.dir")+"//report//extentReport.html").toURI());
